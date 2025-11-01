@@ -1,4 +1,4 @@
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://rachab.pythonanywhere.com';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://trip-planner-react-django-app.onrender.com';
 export const ORS_API_KEY = import.meta.env.VITE_ORS_API_KEY || '';
 
 // Validation de la clé ORS
