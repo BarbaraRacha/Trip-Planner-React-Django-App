@@ -37,7 +37,6 @@ function App() {
                 ELD Trip Planner
               </h1>
               <p className="mt-1 text-sm text-gray-600">
-                FMCSA Compliant Route Planning with Electronic Logging Device Management
               </p>
             </div>
           </div>
