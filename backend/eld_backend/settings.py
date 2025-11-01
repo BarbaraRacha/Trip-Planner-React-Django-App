@@ -96,7 +96,7 @@ USE_TZ = True
 # ------------------------------
 # STATIC FILES
 # ------------------------------
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
@@ -119,6 +119,7 @@ REST_FRAMEWORK = {
 CORS_ALLOW_CREDENTIALS = True
 
 CORS_ALLOWED_ORIGINS = [
+    "rachab.pythonanywhere.com",
     "https://my-tripplanner-two.vercel.app",  # ton frontend Vercel
     "http://localhost:5173",  # pour tests locaux
     "http://127.0.0.1:5173",
