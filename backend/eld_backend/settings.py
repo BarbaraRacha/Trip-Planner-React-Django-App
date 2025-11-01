@@ -126,9 +126,10 @@ if DEBUG:
         "http://localhost:3000",  # React classique
     ]
 else:
-    # Production Render + Vercel
+    # Production 
     CORS_ALLOWED_ORIGINS = config(
         'CORS_ALLOWED_ORIGINS',
+        "https://rachab.pythonanywhere.com",
         default='https://tonapp.vercel.app'
     ).split(',')
 
