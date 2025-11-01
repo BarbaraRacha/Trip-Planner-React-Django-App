@@ -1,6 +1,5 @@
 # 🚛 ELD Trip Planner
 
-> FMCSA-compliant route planning system with automatic Electronic Logging Device (ELD) management for truck drivers.
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://your-app.vercel.app)
 [![API](https://img.shields.io/badge/API-Active-blue)](https://your-backend.onrender.com)
