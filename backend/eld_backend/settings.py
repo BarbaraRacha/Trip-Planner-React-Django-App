@@ -129,7 +129,7 @@ else:
     # Production 
     CORS_ALLOWED_ORIGINS = config(
         'CORS_ALLOWED_ORIGINS',
-        "https://rachab.pythonanywhere.com",
+        'rachab.pythonanywhere.com',
         default='https://tonapp.vercel.app'
     ).split(',')
 
