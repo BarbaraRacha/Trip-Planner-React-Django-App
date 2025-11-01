@@ -79,8 +79,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS Settings
 CORS_ALLOWED_ORIGINS = [
     'https://my-tripplanner-two.vercel.app',
-    'http://localhost:5173',
-]CORS_ALLOW_CREDENTIALS = True
+    'http://localhost:5173'
+]
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = DEBUG  # Seulement en développement
 
 # REST Framework
