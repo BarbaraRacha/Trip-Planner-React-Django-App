@@ -8,7 +8,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY', default='django-insecure-dev-key-change-in-production')
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default=False, cast=bool)  # en prod sur PythonAnywhere
 ALLOWED_HOSTS = ['rachab.pythonanywhere.com', 'www.rachab.pythonanywhere.com']
 
 # ------------------------------
@@ -30,7 +30,7 @@ INSTALLED_APPS = [
 # MIDDLEWARE
 # ------------------------------
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  # doit être tout en haut
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -99,7 +99,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-# Pour servir les fichiers statiques en prod avec Whitenoise
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ------------------------------
@@ -119,19 +118,14 @@ REST_FRAMEWORK = {
 # ------------------------------
 CORS_ALLOW_CREDENTIALS = True
 
-if DEBUG:
-    # Développement local
-    CORS_ALLOWED_ORIGINS = [
-        "http://localhost:5173",  # Vite
-        "http://localhost:3000",  # React classique
-    ]
-else:
-    # Production 
-    CORS_ALLOWED_ORIGINS = config(
-        'CORS_ALLOWED_ORIGINS',
-        'rachab.pythonanywhere.com',
-        default='https://tonapp.vercel.app'
-    ).split(',')
+CORS_ALLOWED_ORIGINS = [
+    "https://my-tripplanner-two.vercel.app",  # ton frontend Vercel
+    "http://localhost:5173",  # pour tests locaux
+    "http://127.0.0.1:5173",
+]
+
+# Si tu veux être 100% sûre, tu peux temporairement activer :
+# CORS_ALLOW_ALL_ORIGINS = True  # ⚠️ à désactiver ensuite !
 
 # ------------------------------
 # DEFAULT AUTO FIELD
