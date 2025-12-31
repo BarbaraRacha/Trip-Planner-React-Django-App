@@ -1,4 +1,4 @@
-# 🚛 ELD Trip Planner
+# 🚛 Trip Planner Application
 
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-success)](https://your-app.vercel.app)
